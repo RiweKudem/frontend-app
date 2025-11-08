@@ -6,6 +6,7 @@
   --background-color: #f9f9f9;
   --text-color: #333;
   --link-color: #007bff;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -19,6 +20,7 @@ body {
 a {
   color: var(--link-color);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
@@ -31,6 +33,7 @@ header {
   color: #fff;
   padding: 1em;
   text-align: center;
+  box-shadow: var(--box-shadow);
 }
 
 header h1 {
@@ -43,6 +46,8 @@ main {
   grid-template-columns: 1fr;
   gap: 1em;
   padding: 1em;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 main article {
@@ -50,7 +55,7 @@ main article {
   padding: 1em;
   border: 1px solid #ddd;
   border-radius: 0.5em;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 main article h2 {
@@ -71,8 +76,14 @@ button {
   padding: 0.5em 1em;
   font-size: 1em;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
   background-color: #228b22;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
